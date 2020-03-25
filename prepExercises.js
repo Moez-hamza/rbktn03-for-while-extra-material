@@ -146,8 +146,17 @@ function meetAndGreet (n){
 
 
 // 5.Write a javascript program to print all Prime numbers from 1 to n.
-
-
+function prime(n) {
+	var result=''
+	var i=2
+	while(i<n){
+		if (n%i!==0) { 
+			result+=', '+i		
+		}
+	i++
+	}
+return result 
+} 
 
 
 // 6.Write a JavaScript for loop that will iterate from 0 to n. For each iteration, it will check if the current number is odd or even, and display a message to the screen.
