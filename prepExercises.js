@@ -151,7 +151,7 @@ function prime(n) {
 	var result=''
 	while(count<n){
 		if (isPrime(count)===true){
-			result=result+','+count	
+			result=result+', '+count	
 		}
 		count++
 	}
@@ -175,12 +175,34 @@ function isPrime(n){
 //  '0 is even' 
 //  '1 is odd' 
 //  '2 is even'
-
+function fromOddOrEven(n) {
+	var result= ''
+	while (n>=0) {
+		if (n%2===0) {
+			result = n + ' is even \n'+result 
+		} else {
+			result = n +' is odd \n'+result 
+		}
+		n--
+		}
+		return result
+}
 
 
 
 // 7.Write a javascript program to enter any number and print all factors of the number.
-
+function factors(n) {
+	var result=''
+	var x=1
+	while(x<=n) {
+		if (n%x===0) {
+			result=x+','+result
+		}
+		x++
+	}
+	return result
+}
+	
 
 
 
