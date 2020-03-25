@@ -87,31 +87,58 @@ function counting(n) {
 //  welcome 5, meet 1, 2, 3 and 4
 // HINT: search for which symbol that creates a line break in a string.
 function meetAndGreet (n){
-	var result=n
+	var result=''
 	while(n>0){
 		if (n===1){
-			result= 'welcome'+n+'\n'+result
-			n--
-		}	if (n===2){
-			result='welcome'+n+', '+'meet '+(n-1)+'\n'+result
-			n--
-		} 	if (n===3){
-			result='welcome'+n+', '+'meet '+(n-2)+' and '+(n-1)+'\n'+result
-			n--
-		}	if (n>3){
-			result='welcome'+n+','+
-			
-	}
+			result='Welcome '+n+'\n'+result
 		}
+		if (n===2){
+			result='Welcome '+n+', '+'meet '+(n-1)+'\n'+result
+		} 	
+		if (n===3){
+			result='Welcome '+n+', '+'meet '+(n-2)+' and '+(n-1)+'\n'+result
+		}	
+		if (n>3){			
+			result='Welcome '+n+', '+'meet '+counting(n-2) +' and '+(n-1) +'\n'+result
+		}
+		n--
+	}
+	return result
+}
+// or more stylish
+
+function meetAndGreet (n){
+	var result=''
+	while(n>0){
+		switch (n){
+			case 1:
+			result='Welcome '+n+'\n'+result;
+			break;
+			case 2:
+			result='Welcome '+n+', '+'meet '+(n-1)+'\n'+result;
+		 	break;
+			case 3:
+			result='Welcome '+n+', '+'meet '+(n-2)+' and '+(n-1)+'\n'+result;
+			break;
+			default:			
+			result='Welcome '+n+', '+'meet '+counting(n-2) +' and '+(n-1) +'\n'+result;
+		}
+		n--
+	}
+	return result
 }
 
 
-
-
 // 4.Reverse String: Write a function that takes a string as an input and returns the reverse of that string.
-//  function reverseString(str) { 
-//        // TODO: your code here 
-//  } 
+ function reverseString(str) { 
+     var result=''
+     var i=str.length-1
+     while (i>=0) {
+     	result+=str[i]
+     	i--
+     }
+     return result
+} 
 //  reverseString('hello'); // => 'olleh' 
 //  reverseString('1#*$'); // => '$*#1'
 // Do this using a while loop.
