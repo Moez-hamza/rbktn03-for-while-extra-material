@@ -7,6 +7,14 @@
 //  sum(3); // => 6 
 //  sum(4); // => 10 
 //  sum(5); // => 15
+function sum(n) {
+	var total = 0 
+	while (n>0) {
+		total = total + n
+		n--
+	}
+	return total
+}
 
 
 
@@ -17,6 +25,14 @@
 //  factorial(3); // => 6 
 //  factorial(4); // => 24 
 //  factorial(5); // => 120
+function factorial(n) {
+	var total=1 
+	while (n>1) {
+		total=total*n
+		n--
+	}
+	return total
+}
 
 
 
@@ -30,6 +46,14 @@
 //  repeatString('dog', 3); // => 'dogdogdog'
 // Your task is to implement the repeatString function using a while loop.
 
+function repeatString(str,n) {
+	var total=''
+	while (n>0) {
+		total=total+str
+		n--
+	}
+	return total
+}
 
 
 
@@ -44,7 +68,14 @@
 //  counting(5); // => '1, 2, 3, 4, 5' 
 //  counting(1); // => '1' 
 //  counting(3); // => '1, 2, 3'
-
+function counting(n) {
+	var count=n 
+	while (n>1) {
+		n--
+		count=n+', '+count
+	}
+	return count 
+}
 
 
 
@@ -55,6 +86,24 @@
 //  welcome 4, meet 1, 2 and 3 
 //  welcome 5, meet 1, 2, 3 and 4
 // HINT: search for which symbol that creates a line break in a string.
+function meetAndGreet (n){
+	var result=n
+	while(n>0){
+		if (n===1){
+			result= 'welcome'+n+'\n'+result
+			n--
+		}	if (n===2){
+			result='welcome'+n+', '+'meet '+(n-1)+'\n'+result
+			n--
+		} 	if (n===3){
+			result='welcome'+n+', '+'meet '+(n-2)+' and '+(n-1)+'\n'+result
+			n--
+		}	if (n>3){
+			result='welcome'+n+','+
+			
+	}
+		}
+}
 
 
 
