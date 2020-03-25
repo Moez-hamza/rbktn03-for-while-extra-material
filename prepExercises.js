@@ -10,7 +10,7 @@
 function sum(n) {
 	var total = 0 
 	while (n>0) {
-		total = total + n
+		total+=n
 		n--
 	}
 	return total
@@ -28,7 +28,7 @@ function sum(n) {
 function factorial(n) {
 	var total=1 
 	while (n>1) {
-		total=total*n
+		total*=n
 		n--
 	}
 	return total
@@ -49,7 +49,7 @@ function factorial(n) {
 function repeatString(str,n) {
 	var total=''
 	while (n>0) {
-		total=total+str
+		total+=str
 		n--
 	}
 	return total
