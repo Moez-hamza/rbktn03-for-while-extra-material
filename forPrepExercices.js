@@ -192,27 +192,22 @@ function shortestWord(string)	{
 
 // 4.Write a function countChar that takes two arguments: any string, and a character (string of one letter), and returns the number of times that the character occurs in the string.
 function countChar(string,ch){
-	var count=0
 	var i=0
-	var str=string
 	while (i<string.length){
-		if (str[0]===ch){
+		if (string[i]===ch){
 			count++
 		}
 		i++
-		str=str.slice(1)
 	}
 	return count
 }
 //or 
 function countChar(string,ch){
 	var count=0
-	var str=string
 	for (var i=0; i<string.length; i++){
-		if (str[0]===ch){
+		if (string[i]===ch){
 			count++
 		}
-		str=str.slice(1)
 	}
 	return count
 }
@@ -244,7 +239,39 @@ function evenLength(array){
 
 // Advanced
 // 1.Read about the join method on MDN and use it to implement a function that accepts a string as an argument and returns that string reversed
-
+function reverseString(string)	{
+	var arr = string.split('')
+	arr=arr.reverse()
+	return 	arr.join('')
+}
+//or 
+function reverseString(string){
+	var arr = string.split('')
+	var rearr=[]
+	for (var i=arr.length-1;i>=0;i--){
+		rearr.push(arr[i])
+	}
+	return rearr.join('')
+}
+//or 
+function reverseString(string){
+	var arr = string.split('')
+	var rearr=[]
+	var i=arr.length-1
+	while (i>=0) {
+		rearr.push(arr[i])
+		i--
+	}
+	return rearr.join('')
+}
 // 2.Write a function keep that 'keeps' certain elements in an array. The function will need to take two arguments, an array, and something else -- the second argument will be what is used to determine which elements to keep.
-
+function keep (array,element){
+	var result=[]
+	for (var i=0; i<array.length; i++){
+		if (typeof(array[i]===typeof(element)) ){
+			result.push(array[i])
+		}
+	}
+	return result 
+}
 // You should be able to use this function to write evens, evenLengthWords, a hypothetical odds function, or oddLengthWords without changing the keep function.
