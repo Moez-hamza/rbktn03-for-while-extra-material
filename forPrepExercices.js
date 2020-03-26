@@ -220,16 +220,28 @@ function countChar(string,ch){
 
 // 5.Write a function evenLengthWords that takes an array of strings as an argument, and returns an array of just the words that have an even length.
 function evenLength(array){
+	var i=0
 	var result=[]
-	for (i=0;i<array.length;i++){
-		for(y=1;y<array.length-1;y++){
-			if (array[i].length===array[y].length){
-				result.push(array[i])
-			}
+	while (i<array.length){
+		if(array[i].length%2===0){
+			result.push(array[i])
 		}
+		i++	
 	}
 	return result
 }
+//or
+
+function evenLength(array){
+	var result=[]
+	for (var i=0; i<array.length;i++){
+		if(array[i].length%2===0){
+			result.push(array[i])
+		}	
+	}
+	return result
+}
+
 // Advanced
 // 1.Read about the join method on MDN and use it to implement a function that accepts a string as an argument and returns that string reversed
 
