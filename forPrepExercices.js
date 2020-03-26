@@ -268,10 +268,11 @@ function reverseString(string){
 function keep (array,element){
 	var result=[]
 	for (var i=0; i<array.length; i++){
-		if (typeof(array[i]===typeof(element)) ){
+		if (typeof(array[i])===typeof(element)){
 			result.push(array[i])
 		}
 	}
 	return result 
 }
+// I know it's wrong but it's all i could do 
 // You should be able to use this function to write evens, evenLengthWords, a hypothetical odds function, or oddLengthWords without changing the keep function.
